@@ -1,9 +1,29 @@
 {
-    "name": "string",
-    "type": "Microsoft.Web/serverfarms",
-    "apiVersion": "2019-08-01",
-    "location": "string",
-    "sku": {
-        "name": "S1"
-    }
+    "$schema": "http://<hostname>:<port>/schemas/2019-04-01/deploymentTemplate.json",
+    "contentVersion": "1.0.0.0",
+    "resources": [
+        {
+            "name": "string",
+            "type": "Microsoft.Web/serverfarms",
+            "apiVersion": "2019-08-01",
+            "location": "string",
+            "sku": {
+                "name": "S1"
+            }
+        },
+        {
+            "name": "string",
+            "type": "Microsoft.Web/sites",
+            "apiVersion": "2019-08-01",
+            "kind": "string",
+            "location": "string",
+            "tags": {},
+            "properties": {
+                "serverFarmId": "Serverfarm"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms','Serverfarm')]"
+            ]
+        }
+    ]
 }
