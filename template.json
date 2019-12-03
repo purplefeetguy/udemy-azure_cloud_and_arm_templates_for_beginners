@@ -13,6 +13,10 @@
         "webappName": {
             "type": "string",
             "defaultValue": "[concat('Webapp-',resoureceGroup().name)]"
+        },
+        "MsDeployPackageUrl": {
+            "type": "string",
+            "minLength": 2
         }
     },
     "resources": [
