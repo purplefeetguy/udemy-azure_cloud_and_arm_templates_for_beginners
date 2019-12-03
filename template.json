@@ -4,11 +4,11 @@
     "parameters": {
         "location": {
             "type": "string",
-            "defaultValue": "[resoureceGroup().location"
+            "defaultValue": "[resoureceGroup().location]"
         },
         "serverfarmName": {
             "type": "string",
-            "defaultValue": "[resoureceGroup().name"
+            "defaultValue": "[concat('Hosting-',resoureceGroup().name)]"
         }
     },
     "resources": [
@@ -22,11 +22,11 @@
             }
         },
         {
-            "name": "string",
+            "name": "Website",
             "type": "Microsoft.Web/sites",
             "apiVersion": "2019-08-01",
             "kind": "string",
-            "location": "string",
+            "location": "[resoureceGroup().location]",
             "tags": {},
             "properties": {
                 "serverFarmId": "[parameters('serverfarmName')]"
