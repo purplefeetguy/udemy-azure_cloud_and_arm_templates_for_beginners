@@ -13,7 +13,7 @@
     },
     "resources": [
         {
-            "name": "string",
+            "name": "[parameters('serverfarmName')]",
             "type": "Microsoft.Web/serverfarms",
             "apiVersion": "2019-08-01",
             "location": "[parameters('location')]",
@@ -29,10 +29,10 @@
             "location": "string",
             "tags": {},
             "properties": {
-                "serverFarmId": "Serverfarm"
+                "serverFarmId": "[parameters('serverfarmName')]"
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Web/serverfarms','Serverfarm')]"
+                "[resourceId('Microsoft.Web/serverfarms',parameters('serverfarmName'))]"
             ]
         }
     ]
