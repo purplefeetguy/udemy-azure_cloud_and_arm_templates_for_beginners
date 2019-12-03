@@ -1,6 +1,9 @@
 {
     "$schema": "http://<hostname>:<port>/schemas/2019-04-01/deploymentTemplate.json",
     "contentVersion": "1.0.0.0",
+    "parameters": {
+
+    },
     "resources": [
         {
             "name": "string",
