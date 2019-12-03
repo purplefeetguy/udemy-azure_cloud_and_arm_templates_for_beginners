@@ -9,6 +9,10 @@
         "serverfarmName": {
             "type": "string",
             "defaultValue": "[concat('Hosting-',resoureceGroup().name)]"
+        },
+        "webappName": {
+            "type": "string",
+            "defaultValue": "[concat('Webapp-',resoureceGroup().name)]"
         }
     },
     "resources": [
@@ -22,7 +26,7 @@
             }
         },
         {
-            "name": "Website",
+            "name": "[concat('Webapp-',resoureceGroup().name)]",
             "type": "Microsoft.Web/sites",
             "apiVersion": "2019-08-01",
             "kind": "string",
