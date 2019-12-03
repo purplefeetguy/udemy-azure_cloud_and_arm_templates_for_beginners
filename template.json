@@ -5,6 +5,10 @@
         "location": {
             "type": "string",
             "defaultValue": "[resoureceGroup().location"
+        },
+        "serverfarmName": {
+            "type": "string",
+            "defaultValue": "[resoureceGroup().name"
         }
     },
     "resources": [
