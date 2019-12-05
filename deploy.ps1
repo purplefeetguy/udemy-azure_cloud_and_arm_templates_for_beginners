@@ -1,6 +1,6 @@
 
 
-$MsDeployPackageUrl="https://pfldemodeploy.blob.core.windows.net/pfldemodeploy/aspnetcoreapp.zip?sp=r&st=2019-12-05T12:34:57Z&se=2020-12-05T20:34:57Z&spr=https&sv=2019-02-02&sr=b&sig=PrW4vndgGHhFa%2Fkp97sUtB2MDjE5m31dOHM9vYbnTEk%3D"
+$MsDeployPackageURL="https://pfldemodeploy.blob.core.windows.net/pfldemodeploy/aspnetcoreapp.zip?sp=r&st=2019-12-05T12:34:57Z&se=2020-12-05T20:34:57Z&spr=https&sv=2019-02-02&sr=b&sig=PrW4vndgGHhFa%2Fkp97sUtB2MDjE5m31dOHM9vYbnTEk%3D"
 $extraparams = New-Object -TypeName Hashtable
 $extraparams.Add('MsDeployPackageUrl',$MsDeployPackageUrl)
 
