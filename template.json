@@ -4,15 +4,15 @@
     "parameters": {
         "location": {
             "type": "string",
-            "defaultValue": "[resoureceGroup().location]"
+            "defaultValue": "[resourceGroup().location]"
         },
         "serverfarmName": {
             "type": "string",
-            "defaultValue": "[concat('Hosting-',resoureceGroup().name)]"
+            "defaultValue": "[concat('Hosting-',resourceGroup().name)]"
         },
         "webappName": {
             "type": "string",
-            "defaultValue": "[concat('Webapp-',resoureceGroup().name)]"
+            "defaultValue": "[concat('Webapp-',resourceGroup().name)]"
         },
         "MsDeployPackageUrl": {
             "type": "string",
@@ -30,11 +30,11 @@
             }
         },
         {
-            "name": "[concat('Webapp-',resoureceGroup().name)]",
+            "name": "[concat('Webapp-',resourceGroup().name)]",
             "type": "Microsoft.Web/sites",
             "apiVersion": "2019-08-01",
             "kind": "string",
-            "location": "[resoureceGroup().location]",
+            "location": "[resourceGroup().location]",
             "tags": {},
             "properties": {
                 "serverFarmId": "[parameters('serverfarmName')]"
@@ -45,7 +45,7 @@
         },
         {
             "name": "[concat(parameters('webappName'),'/MsDeploy')]",
-            "type": "Microsoft.Web/sites/extensions",
+            "type": "Microsoft.Web/sites/siteextensions",
             "apiVersion": "2018-02-01",
             "location": "[parameters('location')]",
             "properties": {
